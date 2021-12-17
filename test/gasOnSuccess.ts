@@ -3,7 +3,7 @@ import { expect } from "chai";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import * as fs from "fs";
 
-describe("Unit tests", function () {
+describe("Transaction success:", function () {
   let signers: SignerWithAddress[];
 
   before(async function () {
@@ -14,7 +14,7 @@ describe("Unit tests", function () {
     it(file, async function () {
       const _artifact = await artifacts.readArtifact(file.split(".")[0]);
       const gasTest = await waffle.deployContract(signers[0], _artifact);
-      await expect(gasTest.connect(signers[0]).set(false)).to.be.reverted;
+      await expect(gasTest.connect(signers[0]).set(true)).to.be.not.reverted;
     });
   });
 });
