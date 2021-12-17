@@ -18,7 +18,16 @@ contract requireWithString {
     }
 }
 
-contract requireWithoutString {
+contract requireWithoutStringS {
+    uint256 mockVariable;
+
+    function set(bool _pass) public {
+        require(_pass);
+        mockVariable = 69420;
+    }
+}
+
+contract requireWithoutStringF {
     uint256 mockVariable;
 
     function set(bool _pass) public {
