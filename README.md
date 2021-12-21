@@ -5,16 +5,28 @@
 ```bash
 yarn install
 ```
+
 ```bash
-REPORT_GAS=true yarn test ./test/gasOnSuccess.ts
+yarn test
 ```
 
-## Results: 
-### Deployment:
-![image](https://user-images.githubusercontent.com/83670532/146609500-a02b8934-75f6-40d7-a077-e814a3be3630.png)
+## To add another error type
 
-### On transaction success:
-![image](https://user-images.githubusercontent.com/83670532/146609471-49ac5987-10d9-4849-ae47-e7f889f10c2b.png)
+Copy one of the contracts in ./contracts and add your template (make sure to ONLY include a custom error/revert, keeping the rest of the contract identical in order to proceed to an apple-to-apple comparison)
 
-### On transaction failure (revert or error()):
-Coming soon ':)
+## Results:
+
+Summary:
+┌──────────────────────┬────────────┬─────────┬─────────┐
+│ (index) │ deployment │ failed │ success │
+├──────────────────────┼────────────┼─────────┼─────────┤
+│ errorLongName │ '86445' │ '21483' │ '43562' │
+│ errorOneArg │ '88179' │ '21501' │ '43562' │
+│ errorOneNamedArg │ '88179' │ '21501' │ '43562' │
+│ errorOneString │ '97557' │ '21537' │ '43562' │
+│ errorThreeArgs │ '91635' │ '21537' │ '43562' │
+│ errorTwoArgs │ '89691' │ '21519' │ '43562' │
+│ errorWithoutArgs │ '86445' │ '21483' │ '43562' │
+│ requireWithString │ '97161' │ '21537' │ '43562' │
+│ requireWithoutString │ '82113' │ '21438' │ '43562' │
+└──────────────────────┴────────────┴─────────┴─────────┘
