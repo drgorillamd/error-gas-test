@@ -16,7 +16,7 @@ Copy one of the contracts in ./contracts and add your template (make sure to ONL
 
 ## Results:
 
-Summary:
+Summary (each test write one uint in storage, reflected in the successful transaction cost):
 <pre>
 ┌──────────────────────┬────────────┬─────────┬─────────┐
 │       (index)        │ deployment │ failed  │ success │
