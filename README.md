@@ -12,7 +12,7 @@ yarn test
 
 ## To add another error type
 
-Copy one of the contracts in ./contracts and add your template (make sure to ONLY include a custom error/revert, keeping the rest of the contract identical in order to proceed to an apple-to-apple comparison)
+Copy one of the contracts in ./contracts and add your template (make sure to ONLY include a custom error/revert, keeping the rest of the contract identical in order to proceed to an apple-to-apple comparison + use the gasLimit override to bypass the (failing) gas estimation from ethers)
 
 ## Results:
 
